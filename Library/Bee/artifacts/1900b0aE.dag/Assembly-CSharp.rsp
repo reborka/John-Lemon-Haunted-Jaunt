@@ -393,7 +393,7 @@
 "Assets/Scripts/LightFlicker.cs"
 "Assets/Scripts/Observer.cs"
 "Assets/Scripts/PlayerMovement.cs"
-"Assets/Scripts/TimerEnding.cs"
+"Assets/Scripts/RestartGame.cs"
 "Assets/Scripts/WaypointPatrol.cs"
 "Assets/Timer.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"

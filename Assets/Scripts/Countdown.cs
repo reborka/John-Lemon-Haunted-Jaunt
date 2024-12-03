@@ -22,6 +22,7 @@ public class Countdown : MonoBehaviour
         {
             remainingTime = 0;
             timerImage.SetActive(true);
+            
         }
   
         int minutes = Mathf.FloorToInt(remainingTime / 60);
@@ -30,6 +31,6 @@ public class Countdown : MonoBehaviour
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
-   
+    
 
 }

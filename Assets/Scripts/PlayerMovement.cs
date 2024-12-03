@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float turnSpeed = 20f;
-    public float speed = 1f; 
+    public float turnSpeed = 5f;
 
     Animator m_Animator;
     Rigidbody m_Rigidbody;
@@ -25,14 +24,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
-        {
-            speed = 5f;
-        }
-        else
-        {
-            speed = 1f;
-        }
+        
     }
     
     void FixedUpdate()
@@ -59,10 +51,19 @@ public class PlayerMovement : MonoBehaviour
         {
             m_AudioSource.Stop();
         }
-       
+
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+        {
+            turnSpeed = 50f;
+        }
+        else 
+        {
+            turnSpeed = 5f;
+        }
 
         Vector3 desiredForward = Vector3.RotateTowards(transform.forward, m_Movement, turnSpeed * Time.deltaTime, 0f);
         m_Rotation = Quaternion.LookRotation (desiredForward);
+
     }
 
     void OnAnimatorMove ()
